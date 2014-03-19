@@ -1,0 +1,29 @@
+{
+  "name": "dropslides",
+  "version": "0.0.0",
+  "authors": [
+    "Rudy Rigot <rudy.rigot@gmail.com>"
+  ],
+  "description": "A slide composer using the Dropbox Datastore API",
+  "main": "index.html",
+  "keywords": [
+    "dropbox",
+    "datastore",
+    "api",
+    "presentation",
+    "revealjs"
+  ],
+  "license": "MIT",
+  "homepage": "http://rudyrigot.github.io/dropslides",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.1"
+  }
+}
