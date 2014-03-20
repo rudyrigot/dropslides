@@ -33,12 +33,12 @@ $(function(){
         },
         {
           title: 'What you know of Dropbox',
-          body: '<img src="https://www.dropbox.com/static/images/syncbox_transparent.png" style="background-color: white">',
+          body: '<img src="img/syncbox_transparent.png" style="background-color: white">',
           position: '2000'
         },
         {
           title: 'What you should know of Dropbox',
-          body: 'aka the Datastore API<br><img src="https://dt8kf6553cww8.cloudfront.net/static/images/developers/developer-datastores-vfliUo8_8.png" style="background-color: white">',
+          body: 'aka the Datastore API<br><img src="img/developer-datastores-vfliUo8_8.png" style="background-color: white">',
           position: '3000'
         },
         {
