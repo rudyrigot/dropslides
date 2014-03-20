@@ -15,41 +15,23 @@
   <body>
     <!-- List of slides (this is where the slides retrieved from the datastore will go) -->
     <div id="slides">
-
-      <section>
-        <h2>30 minutes to build a useful productivity app</h2>
-        <p>… with the awesome Dropbox Datastore API!</p>
-      </section>
-
-      <section>
-        <h2>What you know of Dropbox</h2>
-        <p><img src="https://www.dropbox.com/static/images/syncbox_transparent.png" style="background-color: white"></p>
-      </section>
-
-      <section>
-        <h2>What you should know of Dropbox</h2>
-        <p>aka the Datastore API<br><img src="https://dt8kf6553cww8.cloudfront.net/static/images/developers/developer-datastores-vfliUo8_8.png" style="background-color: white"></p>
-      </section>
-
-      <section>
-        <h2>Step 1 - the idea</h2>
-        <p></p>
-      </section>
-
-      <section>
-        <h2>Step 1 - the idea</h2>
-        <p>What if we made a slide composer today?</p>
-      </section>
-
-      <section>
-        <h2>Step 2 - Hot damn! I didn't make the other slides!!</h2>
-        <p>Well, let's <a href="index.html">work this out</a> together…</p>
-      </section>
     </div>
+
+    <!-- Template for a slide -->
+    <script type="text/template" id="slide-template">
+      <div class="slide" id="<%= slide.getId() %>" data-order="<%= slide.get("position") %>">
+        <span class="position"><%= slide.get("position") %></span>
+        <section>
+          <h2><%= slide.get("title") %></h2>
+          <p><%= slide.get("body") %></p>
+        </section>
+      </div>
+    </script>
 
     <!-- Including all the vendor scripts -->
     <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js" type="text/javascript"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-insertinorder/dist/insertinorder.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
 
     <!-- Including the local script -->

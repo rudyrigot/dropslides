@@ -9,33 +9,41 @@
     font-style: normal;
 }
 
-#slides section {
+#slides .slide {
+  float: left;
+  margin: 10px;
+}
+#slides .slide section {
   height: 200px;
   width: 300px;
-  float: left;
   overflow: hidden;
   border: 1px solid black;
   padding: 10px;
-  margin: 10px;
   text-align: center;
   background: radial-gradient(#555a5f, #1c1e20);
   color: #eeeeee;
 }
 
-#slides h2 {
+#slides .slide h2 {
   font-family: "League Gothic", Impact, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 28px;
 }
-#slides p {
+#slides .slide p {
   font-family: Lato, sans-serif;
 }
-#slides p a {
+#slides .slide p a {
   font-family: Lato, sans-serif;
   color: #13daec;
   text-decoration: none;
 }
-#slides p img {
+#slides .slide p img {
   width: 100%;
+}
+#slides .slide span.position {
+  border: 1px solid black;
+  padding: 2px 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
