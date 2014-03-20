@@ -1,5 +1,6 @@
 var loadBitsOfUI = function() {
   $('body').addClass('step3');
+  $('body').addClass('step4');
 }
 
 var attachEventsOnce = function() {
@@ -19,6 +20,7 @@ var attachEventsOnce = function() {
 var attachEventsOnSlideAdd = function(slide){
   var slideID = slide.attr('id');
 
+
   /* On click to a delete button */
   $('.delete', slide).click(function(e){
     if(confirm('Are you sure you want to delete this slide?')) {
@@ -27,6 +29,18 @@ var attachEventsOnSlideAdd = function(slide){
       slidesTable.get(slideID).deleteRecord();
 
     }
+    e.preventDefault();
+  });
+
+
+  /* On click to an edit button */
+  $('.edit', slide).click(function(e){
+    editSlideModal(slide, function(id, title, body, position){
+
+      // TODO : updating the slide with the given new parameters
+      slidesTable.get(id).update({title : title, body : body, position : position});
+
+    });
     e.preventDefault();
   });
 

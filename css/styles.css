@@ -65,21 +65,21 @@
   color: #eeeeee;
 }
 
-#slides .slide h2 {
+#slides .slide section h2 {
   font-family: "League Gothic", Impact, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 28px;
 }
-#slides .slide p {
+#slides .slide section p {
   font-family: Lato, sans-serif;
 }
-#slides .slide p a {
+#slides .slide section p a {
   font-family: Lato, sans-serif;
   color: #13daec;
   text-decoration: none;
 }
-#slides .slide p img {
+#slides .slide section p img {
   width: 100%;
 }
 #slides .slide span.position {
@@ -111,6 +111,41 @@
   box-shadow: 0 0 2px #888888;
 }
 
+/* Subbuttons */
+#slides .slide .subbuttons {
+  margin: 0;
+  text-align: right;
+}
+#slides .slide .subbuttons a {
+  color: black;
+  border: 1px solid black;
+  padding: 2px 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-decoration: none;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px #888888;
+  background-color: #f0f0f0;
+  display: none;
+}
+#slides .slide .subbuttons a:hover {
+  background-color: #fafafa;
+}
+#slides .slide .subbuttons a:active {
+  box-shadow: 0 0 2px #888888;
+}
+
+/* Just changing a couple of stuff in the modal box */
+.remodal input {
+  width: 500px;
+}
+.remodal input#modal_position {
+  width: 100px;
+}
+
 /* What is displayed on step 3 */
 body.step3 #slides .slide .delete { display: inline; }
 body.step3 #buttons #add { display: block; }
+
+/* What is displayed on step 4 */
+body.step4 #slides .slide .subbuttons .edit { display: inline; }
