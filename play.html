@@ -17,10 +17,29 @@
   </head>
 
   <body>
-    
+    <!-- This is where the slides will be inserted -->
+    <div class="reveal">
+      <div class="slides">
+      </div>
+    </div>
+
+    <!-- The template for a slide -->
+    <script type="text/template" id="slide-template">
+      <section id="<%= slide.get("id") %>" data-order="<%= slide.get("position") %>">
+        <h2><%= slide.get("title") %></h2>
+        <p><%= slide.get("body") %></p>
+      </section>
+    </script>
+
+    <!-- Including all the vendor scripts -->
     <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js" type="text/javascript"></script>
     <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
     <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-insertinorder/dist/insertinorder.min.js"></script>
+
+    <!-- Including the local script -->
     <script src="js/play.js" type="text/javascript"></script>
   </body>
 </html>
