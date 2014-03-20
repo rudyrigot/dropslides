@@ -6,6 +6,7 @@ var insertSlideIntoDom = function(slide) {
     _.template($('#slide-template').html(), { slide: slide }), // the slide
     slide.get("position")
   );
+  attachEventsOnSlideAdd($('#'+slide.getId()));
 }
 
 $(function(){
@@ -46,6 +47,10 @@ $(function(){
 
       /* And for each slide queried, inserting it in the DOM, in order */
       _.each(slidesTable.query(), insertSlideIntoDom);
+
+      loadBitsOfUI();
+
+      attachEventsOnce();
 
     });
 

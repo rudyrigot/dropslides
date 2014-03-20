@@ -1,3 +1,5 @@
+/* General rules for the whole page */
+
 @font-face {
     font-family: 'League Gothic';
     src: url('../fonts/leaguegothic-regular-webfont.eot');
@@ -8,7 +10,46 @@
     font-weight: normal;
     font-style: normal;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Buttons on the right side */
+
+#buttons {
+  position: fixed;
+  right: 20px;
+}
+#buttons a {
+  display: block;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 2px 2px 5px #888888;
+}
+#buttons a:hover {
+  background-color: #fafafa;
+}
+#buttons a:focus, #buttons a:active {
+  box-shadow: 0 0 5px #888888;
+}
+#buttons #play span {
+  font-size: 0.8em;
+}
+#buttons #add {
+  display: none;
+}
+
+/* The slides themselves */
+
+#slides {
+  padding-right: 100px;
+}
 #slides .slide {
   float: left;
   margin: 10px;
@@ -47,3 +88,29 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
+/* The delete button */
+#slides .slide .delete {
+  position: absolute;
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 11px;
+  margin: 7px 0 0 308px;
+  box-shadow: 2px 2px 2px #888888;
+  display: none;
+}
+#slides .slide .delete:hover {
+  background-color: #fafafa;
+}
+#slides .slide .delete:active {
+  color: black;
+  box-shadow: 0 0 2px #888888;
+}
+
+/* What is displayed on step 3 */
+body.step3 #slides .slide .delete { display: inline; }
+body.step3 #buttons #add { display: block; }

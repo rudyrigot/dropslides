@@ -13,13 +13,19 @@
   </head>
 
   <body>
+    <div id="buttons">
+      <a id="play" href="play.html" target="_blank">Play <span>&#9654;</span></a>
+      <a id="add" href="#">Add <span>+</span></a>
+    </div>
+
     <!-- List of slides (this is where the slides retrieved from the datastore will go) -->
-    <div id="slides">
+    <div id="slides" class="clearfix">
     </div>
 
     <!-- Template for a slide -->
     <script type="text/template" id="slide-template">
       <div class="slide" id="<%= slide.getId() %>" data-order="<%= slide.get("position") %>">
+        <a class="delete" href="#">&#9747;</a>
         <span class="position"><%= slide.get("position") %></span>
         <section>
           <h2><%= slide.get("title") %></h2>
@@ -36,5 +42,6 @@
 
     <!-- Including the local script -->
     <script src="js/editor.js" type="text/javascript"></script>
+    <script src="js/editor-ui.js" type="text/javascript"></script>
   </body>
 </html>
