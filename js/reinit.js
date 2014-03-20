@@ -54,7 +54,7 @@ $(function(){
         {
           title: 'Step 2 - Hot damn! I didn\'t make the other slides!!',
           body: 'Well, let\'s <a href="index.html">work this out</a> together&hellip;',
-          position: '5000'
+          position: '6000'
         }
       ];
 
