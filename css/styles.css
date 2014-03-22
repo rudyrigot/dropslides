@@ -135,12 +135,17 @@
   box-shadow: 0 0 2px #888888;
 }
 
-/* Just changing a couple of stuff in the modal box */
-.remodal input {
-  width: 500px;
+/* The modal box */
+#modalbox {
+  display: none;
+  background: white;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #888888;
 }
-.remodal input#modal_position {
-  width: 100px;
+#modalbox #modal_title, #modalbox #modal_body {
+  width: 400px;
 }
 
 /* What is displayed on step 3 */

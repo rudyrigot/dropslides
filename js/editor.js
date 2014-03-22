@@ -7,28 +7,21 @@ var insertSlideIntoDom = function(slide) {
     _.template($('#slide-template').html(), { slide: slide }), // the slide
     slide.get("position")
   );
-  attachEventsOnSlideAdd($('#'+slide.getId()));
-}
 
-// this function allows to open a modal asking the new features of the slide, and returns them in the callback
-var editSlideModal = function(slide, callback){
-  $(document).off('confirm', '.remodal');
-  $('body').append(_.template($('#modal-template').html()));
-  $('[data-remodal-id=modal] #modal_title').val($('section h2', slide).html());
-  $('[data-remodal-id=modal] #modal_body').val($('section p', slide).html());
-  $('[data-remodal-id=modal] #modal_position').val(slide.attr('data-order'));
-  $('[data-remodal-id=modal] #modal_id').html(slide.attr('id'));
-  $('[data-remodal-id=modal]').remodal({ "hashTracking": false }).open();
-  console.log($('form#remodal-form'))
-  $('form#remodal-form #remodal-submit').click(function(e){
-    callback(
-      slide.attr('id'),
-      $('[data-remodal-id=modal] #modal_title').val(),
-      $('[data-remodal-id=modal] #modal_body').val(),
-      $('[data-remodal-id=modal] #modal_position').val()
-    );
+  var slideElem = $('#'+slide.getId());
+
+  /* On click to an edit button */
+  $('.edit', slideElem).click(function(e){
+    $('#modalbox #modal_id').html(slideElem.attr('id'));
+    $('#modalbox #modal_title').val($('section h2', slideElem).html());
+    $('#modalbox #modal_body').val($('section p', slideElem).html());
+    $('#modalbox #modal_position').val(slideElem.attr('data-order'));
+    $('#modalbox').modalBox();
     e.preventDefault();
   });
+
+  /* Other events being attached from editor-ui for demo purposes */
+  attachEventsOnSlideAdd(slideElem);
 }
 
 $(function(){

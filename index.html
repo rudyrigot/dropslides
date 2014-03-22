@@ -7,7 +7,6 @@
     <meta name="description" content="A slide composer using the Dropbox Datastore API">
     <meta name="author" content="Rudy Rigot">
 
-    <link rel="stylesheet" type="text/css" href="bower_components/remodal/dist/jquery.remodal.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -39,37 +38,35 @@
     </script>
 
     <!-- Template for the modal to edit slides -->
-    <script type="text/template" id="modal-template">
-      <div class="remodal" data-remodal-id="modal">
-        <form id="remodal-form" action="#">
-          <h1>Update your slide</h1>
-          <p>
-            ID: <span id="modal_id"></span>
-          </p>
-          <p>
-            <label>Title</label><br>
-            <input id="modal_title">
-          </p>
-          <p>
-            <label>Body</label><br>
-            <input id="modal_body">
-          </p>
-          <p>
-            <label>Position</label><br>
-            <input id="modal_position">
-          </p>
-          <br>
-          <input id="remodal-submit" type="submit" class="remodal-confirm" href="#" value="OK">
-        </form>
-      </div>
-    </script>
+    <div id="modalbox">
+      <form id="modalbox-form" action="#">
+        <h1>Update your slide</h1>
+        <p>
+          ID: <span id="modal_id"></span>
+        </p>
+        <p>
+          <label>Title</label><br>
+          <input id="modal_title">
+        </p>
+        <p>
+          <label>Body</label><br>
+          <input id="modal_body">
+        </p>
+        <p>
+          <label>Position</label><br>
+          <input id="modal_position">
+        </p>
+        <br>
+        <input id="modalbox-submit" type="submit" value="OK">
+      </form>
+    </div>
 
     <!-- Including all the vendor scripts -->
     <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js" type="text/javascript"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/jquery-insertinorder/dist/insertinorder.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/remodal/dist/jquery.remodal.min.js"></script>
+    <script src="bower_components/modalbox/modalbox-min.js"></script>
 
     <!-- Including the local script -->
     <script src="js/editor.js" type="text/javascript"></script>

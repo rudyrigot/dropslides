@@ -28,6 +28,6 @@
     "jquery": "~2.1.0",
     "underscore": "~1.6.0",
     "jquery-insertinorder": "~0.1.1",
-    "remodal": "~0.1.2"
+    "modalbox": "~1.0.2"
   }
 }
