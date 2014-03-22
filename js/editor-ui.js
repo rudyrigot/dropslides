@@ -1,6 +1,7 @@
 var loadBitsOfUI = function() {
   $('body').addClass('step3');
   $('body').addClass('step4');
+  $('body').addClass('step5');
 }
 
 var attachEventsOnce = function() {
@@ -11,7 +12,7 @@ var attachEventsOnce = function() {
     var calculatedPosition = parseInt($('#slides .slide:last-child').attr('data-order'))+1000;
 
     // TODO : inserting this new slide
-    slidesTable.insert({title: promptedTitle, body: promptedBody, position: calculatedPosition});
+    slidesTable.insert({title: promptedTitle, body: promptedBody, position: calculatedPosition, disabled: false});
 
     e.preventDefault();
   });
@@ -42,6 +43,24 @@ var attachEventsOnSlideAdd = function(slide){
 
       // TODO : deleting this slide
       slidesTable.get(slideID).deleteRecord();
+
+    }
+    e.preventDefault();
+  });
+
+
+  /* On click to toggle button */
+  $('.toggle', slide).click(function(e){
+    var isDisabled = slide.hasClass('disabled');
+    if(isDisabled) {
+
+      // TODO : enable this slide
+      slidesTable.get(slideID).set('disabled', false);
+
+    } else {
+
+      // TODO : disable this slide
+      slidesTable.get(slideID).set('disabled', true);
 
     }
     e.preventDefault();

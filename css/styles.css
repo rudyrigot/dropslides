@@ -54,6 +54,9 @@
   float: left;
   margin: 10px;
 }
+#slides .disabled {
+  opacity: 0.5;
+}
 #slides .slide section {
   height: 200px;
   width: 300px;
@@ -64,7 +67,6 @@
   background: radial-gradient(#555a5f, #1c1e20);
   color: #eeeeee;
 }
-
 #slides .slide section h2 {
   font-family: "League Gothic", Impact, sans-serif;
   font-weight: normal;
@@ -123,7 +125,6 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-decoration: none;
-  margin-left: 10px;
   box-shadow: 2px 2px 2px #888888;
   background-color: #f0f0f0;
   display: none;
@@ -154,3 +155,6 @@ body.step3 #buttons #add { display: block; }
 
 /* What is displayed on step 4 */
 body.step4 #slides .slide .subbuttons .edit { display: inline; }
+
+/* What is displayed on step 5 */
+body.step5 #slides .slide .subbuttons .toggle { display: inline; }

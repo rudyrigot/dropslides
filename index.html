@@ -24,7 +24,7 @@
 
     <!-- Template for a slide -->
     <script type="text/template" id="slide-template">
-      <div class="slide" id="<%= slide.getId() %>" data-order="<%= slide.get("position") %>">
+      <div id="<%= slide.getId() %>" data-order="<%= slide.get("position") %>" class="slide <%= (slide.get("disabled") && slide.get("disabled")) ? "disabled" : "" %>">
         <a class="delete" href="#">&#9747;</a>
         <span class="position"><%= slide.get("position") %></span>
         <section>
@@ -32,6 +32,7 @@
           <p><%= slide.get("body") %></p>
         </section>
         <p class="subbuttons">
+          <a class="toggle" href="#"><%= (slide.get("disabled") && slide.get("disabled")) ? "Enable" : "Disable" %></a>
           <a class="edit" href="#">Edit</a>
         </p>
       </div>
