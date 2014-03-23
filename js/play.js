@@ -30,7 +30,6 @@ $(function(){
 
       /* Now that the DOM is up-to-date, launching the Reveal.js presentation */
       Reveal.initialize({
-        history: true,
         touch: true,
         hideAddressBar: true
       });
