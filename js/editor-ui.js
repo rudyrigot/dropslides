@@ -1,7 +1,7 @@
 var loadBitsOfUI = function() {
   $('body').addClass('step3');
   $('body').addClass('step4');
-  // $('body').addClass('step5');
+  $('body').addClass('step5');
 }
 
 var attachEventsOnce = function() {
@@ -57,11 +57,12 @@ var attachEventsOnSlideAdd = function(slide){
     if(isDisabled) {
 
       // TODO : enable the slide at `id`
-
+      slidesTable.get(id).set('disabled', false);
 
     } else {
 
       // TODO : disable this slide at `id`
+      slidesTable.get(id).set('disabled', true);
 
 
     }
