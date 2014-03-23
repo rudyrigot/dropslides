@@ -1,6 +1,6 @@
 var loadBitsOfUI = function() {
   $('body').addClass('step3');
-  // $('body').addClass('step4');
+  $('body').addClass('step4');
   // $('body').addClass('step5');
 }
 
@@ -27,7 +27,7 @@ var attachEventsOnce = function() {
     var position = $('#modalbox #modal_position').val();
 
     // TODO: updating the slide at `id`
-
+    slidesTable.get(id).update({title: title, body: body, position: position});
 
     $('#modalbox').modalBox('close');
     e.preventDefault();
