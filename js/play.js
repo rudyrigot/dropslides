@@ -28,11 +28,27 @@ $(function(){
         );
       });
 
+      /* If changes are performed, this page reloads */
+      datastore.recordsChanged.addListener(function (event) {
+        if (event.affectedRecordsForTable('slides').length > 0) {
+          location.reload();
+        }
+      });
+
       /* Now that the DOM is up-to-date, launching the Reveal.js presentation */
       Reveal.initialize({
         touch: true,
         hideAddressBar: true
       });
+
+      /* Making sure we come back on the same slide */
+      if (location.hash == '#r' && localStorage['currentSlide']) {
+        Reveal.slide(localStorage['currentSlide']);
+      }
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        localStorage['currentSlide'] = event.indexh;
+        console.log(localStorage['currentSlide']);
+      } );
     });
 
   }
