@@ -21,7 +21,7 @@ $(function(){
       var slidesTable = datastore.getTable('slides');
 
       /* And for each slide queried, inserting it in the DOM, in order */
-      _.each(slidesTable.query(), function(slide){
+      _.each(slidesTable.query({disabled: false}), function(slide){
         $('.slides').insertinorder(
           _.template($('#slide-template').html(), { slide: slide }), // the slide
           slide.get("position")
