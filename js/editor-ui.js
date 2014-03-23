@@ -1,5 +1,5 @@
 var loadBitsOfUI = function() {
-  // $('body').addClass('step3');
+  $('body').addClass('step3');
   // $('body').addClass('step4');
   // $('body').addClass('step5');
 }
@@ -12,6 +12,7 @@ var attachEventsOnce = function() {
     var calculatedPosition = parseInt($('#slides .slide:last-child').attr('data-order'))+1000;
 
     // TODO : inserting this new slide
+    slidesTable.insert({title: promptedTitle, body: promptedBody, position: calculatedPosition, disabled: false});
 
 
     e.preventDefault();
@@ -42,6 +43,7 @@ var attachEventsOnSlideAdd = function(slide){
     if(confirm('Are you sure you want to delete this slide?')) {
 
       // TODO : deleting the slide at `id`
+      slidesTable.get(id).deleteRecord();
 
 
     }
