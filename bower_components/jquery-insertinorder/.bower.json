@@ -1,0 +1,35 @@
+{
+  "name": "jquery-insertinorder",
+  "version": "0.1.1",
+  "authors": [
+    "Rudy Rigot <rudy.rigot@gmail.com>"
+  ],
+  "description": "A JQuery plugin to insert a new DOM element at the right place within sibling DOM elements.",
+  "main": "dist/insertinorder.min.js",
+  "keywords": [
+    "jquery",
+    "insert",
+    "order"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rudyrigot/jquery-insertinorder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  },
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.1",
+    "commit": "0ff3abc361536beda488e8c5446bba2b3e4a6792"
+  },
+  "_source": "git://github.com/rudyrigot/jquery-insertinorder.git",
+  "_target": "~0.1.1",
+  "_originalSource": "jquery-insertinorder"
+}

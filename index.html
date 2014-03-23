@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DropSlides</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>30 minutes to build something<br>cool and useful</h2>
+					<p>&hellip; with the awesome Dropbox Datastore API!</p><p><small><em>A meta-talk by @RudyRigot</em></small></p>
+				</section>
+				<section>
+					<h2></h2>
+					<p><img src="img/matrix.jpg"></p>
+				</section>
+				<section>
+					<h2>What you know of Dropbox</h2>
+					<p>Our users' file-system for the internet<br><img src="img/syncbox_transparent.png" style="background-color: white"></p>
+				</section>
+				<section>
+					<h2>What you probably know of Dropbox</h2>
+					<p><strong><u>Your</u></strong> users\' file-system for the internet: the Dropbox Core API<br><img src="img/syncbox_transparent.png" style="background-color: white"></p>
+				</section>
+				<section>
+					<h2>What you should know of Dropbox</h2>
+					<p>Your users' structured data: the Datastore API<br><img src="img/developer-datastores-vfliUo8_8.png" style="background-color: white"></p>
+				</section>
+				<section>
+					<h2>Step 1 - the idea</h2>
+					<p>?</p>
+				</section>
+				<section>
+					<h2>Step 1 - the idea</h2>
+					<p>What if we made a slide composer,<br>so we can use it for this presentation?</p>
+				</section>
+				<section>
+					<h2>Step 2 - Deleting and inserting</h2>
+					<p><img src="img/delete.gif" style="width: 50%"><img src="img/insert.gif" style="width: 50%"></p>
+				</section>
+				<section>
+					<h2>Step 3 - Deleting and inserting (UI)</h2>
+					<p><img src="img/deleteui.gif" style="width: 50%"><img src="img/insertui.gif" style="width: 50%"></p>
+				</section>
+				<section>
+					<h2>Step 4 - Updating from the UI</h2>
+					<p><img src="img/update.gif"></p>
+				</section>
+				<section>
+					<h2>Step 5 - Disabling</h2>
+					<p><img src="img/disable.gif"></p>
+				</section>
+				<section>
+					<h2>Step 6 - Syncing</h2>
+					<p><img src="img/sync.gif"></p>
+				</section>
+				<section>
+					<h2>Step 7 - Offline</h2>
+					<p><img src="img/offline.gif"></p>
+				</section>
+				<section>
+					<h2>Step 8 - Offline conflicts</h2>
+					<p></p>
+				</section>
+				<section>
+					<h2>Next steps?</h2>
+					<p></p>
+				</section>
+				<section>
+					<h2>Questions?</h2>
+					<p></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
