@@ -45,6 +45,9 @@ $(function(){
 
       /* Datastore acquired! Getting the slides table */
       slidesTable = datastore.getTable('slides');
+      slidesTable.setResolutionRule('title', 'local');
+      slidesTable.setResolutionRule('body', 'local');
+      slidesTable.setResolutionRule('position', 'max');
 
       /* Syncing */
       datastore.recordsChanged.addListener(function (event) {

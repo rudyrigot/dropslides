@@ -1,7 +1,7 @@
 var loadBitsOfUI = function() {
-  $('body').addClass('step3');
-  $('body').addClass('step4');
-  $('body').addClass('step5');
+  // $('body').addClass('step3');
+  // $('body').addClass('step4');
+  // $('body').addClass('step5');
 }
 
 var attachEventsOnce = function() {
@@ -12,7 +12,7 @@ var attachEventsOnce = function() {
     var calculatedPosition = parseInt($('#slides .slide:last-child').attr('data-order'))+1000;
 
     // TODO : inserting this new slide
-    slidesTable.insert({title: promptedTitle, body: promptedBody, position: calculatedPosition, disabled: false});
+
 
     e.preventDefault();
   });
@@ -25,8 +25,8 @@ var attachEventsOnce = function() {
     var body = $('#modalbox #modal_body').val();
     var position = $('#modalbox #modal_position').val();
 
-    // TODO: updating this slide
-    slidesTable.get(id).update({title: title, body: body, position: position});
+    // TODO: updating the slide at `id`
+
 
     $('#modalbox').modalBox('close');
     e.preventDefault();
@@ -35,14 +35,14 @@ var attachEventsOnce = function() {
 
 
 var attachEventsOnSlideAdd = function(slide){
-  var slideID = slide.attr('id');
+  var id = slide.attr('id');
 
   /* On click to a DELETE button */
   $('.delete', slide).click(function(e){
     if(confirm('Are you sure you want to delete this slide?')) {
 
-      // TODO : deleting this slide
-      slidesTable.get(slideID).deleteRecord();
+      // TODO : deleting the slide at `id`
+
 
     }
     e.preventDefault();
@@ -54,13 +54,13 @@ var attachEventsOnSlideAdd = function(slide){
     var isDisabled = slide.hasClass('disabled');
     if(isDisabled) {
 
-      // TODO : enable this slide
-      slidesTable.get(slideID).set('disabled', false);
+      // TODO : enable the slide at `id`
+
 
     } else {
 
-      // TODO : disable this slide
-      slidesTable.get(slideID).set('disabled', true);
+      // TODO : disable this slide at `id`
+
 
     }
     e.preventDefault();
